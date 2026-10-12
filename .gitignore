@@ -1,0 +1,9 @@
+# Dependencias y archivos temporales
+*.py
+*.pyc
+*.log
+*.jsonl
+
+# La carpeta de PDFs locales (14 GB no permitidos por límite de 100MB de GitHub)
+# Para la versión pública, los PDFs se enlazan mediante Google Drive o almacenamiento externo
+biblioteca_pdfs/

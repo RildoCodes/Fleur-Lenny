@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur Lenny | Biblioteca Preuniversitaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HERO HEADER -->
+    <header class="main-header">
+        <div class="header-bg-pattern"></div>
+        <div class="header-container">
+            <div class="brand">
+                <div class="brand-logo" id="secretLogoEgg" title="Fleur Lenny • Modo Café" style="cursor: pointer;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="#ea580c" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2 8h16v7a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <path d="M6 1h.01M10 1h.01M14 1h.01" stroke="#ea580c" stroke-width="2" stroke-linecap="round"/>
+  <path d="M6 3c0 .5-.5 1-.5 1.5M10 3c0 .5-.5 1-.5 1.5M14 3c0 .5-.5 1-.5 1.5" stroke="#fdba74" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M4 11h12" stroke="#ea580c" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div>
+                <div class="brand-info">
+                    <h1>FLEUR LENNY</h1>
+                    <span class="brand-sub">Repositorio Preuniversitario Oficial</span>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-chip"><i class="ph-fill ph-files"></i> <span>322 materiales</span></div>
+                <div class="stat-chip accent"><i class="ph-fill ph-star"></i> <span>UNAP · CEPREUNA</span></div>
+            </div>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <nav class="nav-bar">
+            <div class="nav-inner">
+                <button class="nav-tab active" data-tab="tab-biblioteca">
+                    <i class="ph ph-books"></i> Biblioteca
+                </button>
+                <button class="nav-tab" data-tab="tab-examenes">
+                    <i class="ph-fill ph-scroll"></i> Exámenes UNAP · UNSA
+                    <span class="badge-new">OFICIAL</span>
+                </button>
+                <button class="nav-tab" data-tab="tab-formularios">
+                    <i class="ph-fill ph-lightning"></i> Formularios Insanos
+                    <span class="badge-hot">⚡ FIJAS</span>
+                </button>
+                
+            </div>
+        </nav>
+    </header>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="announcement-inner">
+            <span class="ticker-content">
+                🏔️ &nbsp;|&nbsp; <strong>322 libros y materiales Pre-U</strong> listos para descargar &nbsp;|&nbsp;
+                📘 Lumbreras Rojos &nbsp;·&nbsp; Cuzcano por Tomos &nbsp;·&nbsp; RODO Editorial &nbsp;·&nbsp; Uniciencia Sapiens &nbsp;·&nbsp; San Marcos &nbsp;·&nbsp; Wilson Sadness &nbsp;|&nbsp;
+                📋 Exámenes Oficiales UNAP &amp; CEPREUNA · UNSA &nbsp;|&nbsp;
+                🏔️
+            </span>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- ===== TAB 1: BIBLIOTECA ===== -->
+        <section id="tab-biblioteca" class="content-section active">
+
+            <!-- FILTROS -->
+            <div class="filters-panel">
+                <div class="search-wrap">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar libro, tema o editorial (ej: Álgebra, Cuzcano, Física...)">
+                    <button id="clearSearch" class="btn-clear"><i class="ph ph-x"></i></button>
+                </div>
+
+                <div class="filter-row">
+                    <!-- ÁREA -->
+                    <div class="filter-group">
+                        <label><i class="ph ph-squares-four"></i> Área</label>
+                        <div class="pills" id="pillsArea">
+                            <button class="pill active" data-filter="area" data-val="Todas">Todas</button>
+                            <button class="pill" data-filter="area" data-val="Matemática">Matemática</button>
+                            <button class="pill" data-filter="area" data-val="Razonamiento">Razonamiento</button>
+                            <button class="pill" data-filter="area" data-val="Física">Física</button>
+                            <button class="pill" data-filter="area" data-val="Química">Química</button>
+                            <button class="pill" data-filter="area" data-val="Biología">Biología</button>
+                            <button class="pill" data-filter="area" data-val="Letras">Letras &amp; Sociales</button>
+                        </div>
+                    </div>
+
+                    <!-- EDITORIAL -->
+                    <div class="filter-group">
+                        <label><i class="ph ph-book-bookmark"></i> Editorial</label>
+                        <div class="pills" id="pillsEditorial">
+                            <button class="pill active" data-filter="editorial" data-val="Todas">Todas</button>
+                            <button class="pill" data-filter="editorial" data-val="Lumbreras">Lumbreras</button>
+                            <button class="pill" data-filter="editorial" data-val="Cuzcano">Cuzcano</button>
+                            <button class="pill" data-filter="editorial" data-val="RODO">RODO</button>
+                            <button class="pill" data-filter="editorial" data-val="Uniciencia">Uniciencia</button>
+                            <button class="pill" data-filter="editorial" data-val="San Marcos">San Marcos</button>
+                            <button class="pill" data-filter="editorial" data-val="Wilson">Wilson Sadness</button>
+                        </div>
+                    </div>
+
+                    <!-- CARRERA -->
+                    <div class="filter-group">
+                        <label><i class="ph ph-graduation-cap"></i> Modalidad</label>
+                        <select id="selectCarrera" class="custom-select">
+                            <option value="Todas">Todas las carreras</option>
+                            <option value="Ingenierias">Ingeniería / Ciencias</option>
+                            <option value="Sociales">Sociales / Biomédicas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULTS HEADER -->
+            <div class="results-bar">
+                <span id="resultsCount">Cargando materiales...</span>
+                <span class="results-tag"><i class="ph ph-map-pin"></i> Puno · 2026</span>
+            </div>
+
+            <!-- GRID DE LIBROS -->
+            <div class="books-grid" id="booksGrid"></div>
+        </section>
+
+        <!-- ===== TAB 2: EXÁMENES UNAP / UNSA ===== -->
+        <section id="tab-examenes" class="content-section">
+            <div class="exam-hero">
+                <div class="exam-hero-text">
+                    <span class="exam-hero-badge">📋 Archivos Oficiales</span>
+                    <h2>Exámenes Reales UNAP &amp; UNSA</h2>
+                    <p>Archivos originales de exámenes de admisión de la Universidad Nacional del Altiplano (UNAP) y la Universidad Nacional de San Agustín (UNSA). Recopilados y organizados por <strong>Wilson Sadness</strong>.</p>
+                </div>
+                <div class="exam-hero-img"><i class="ph-fill ph-exam"></i></div>
+            </div>
+
+            <div class="exam-cards-grid">
+                <div class="exam-card unap">
+                    <div class="exam-card-header">
+                        <div class="exam-badge-uni">UNAP</div>
+                        <span>Universidad Nacional del Altiplano Puno</span>
+                    </div>
+                    <div class="exam-card-body">
+                        <div class="exam-icon-big"><i class="ph-fill ph-scroll"></i></div>
+                        <h3>Banco de Exámenes de Admisión UNAP</h3>
+                        <p>Colección completa de exámenes de admisión pasados de la UNAP. Incluye preguntas por áreas (Matemática, Ciencias, Letras) con sus respuestas oficiales.</p>
+                        <div class="exam-details">
+                            <span><i class="ph ph-files"></i> 2 archivos recopilados</span>
+                            <span><i class="ph ph-check-circle"></i> Fuente: Wilson Sadness</span>
+                        </div>
+                    </div>
+                    <div class="exam-card-footer">
+                        <button class="btn-exam-download" onclick="descargarExamen('UNAP_1')">
+                            <i class="ph ph-download-simple"></i> ARVHIVO 2 EXAMENES UNAP
+                        </button>
+                        <button class="btn-exam-download" onclick="descargarExamen('UNAP_2')">
+                            <i class="ph ph-download-simple"></i> ARCHIVO EXAMENES UNAP
+                        </button>
+                    </div>
+                </div>
+
+                <div class="exam-card cepreuna">
+                    <div class="exam-card-header">
+                        <div class="exam-badge-uni" style="background:#7c3aed;">CEPREUNA</div>
+                        <span>Centro Preuniversitario UNA Puno</span>
+                    </div>
+                    <div class="exam-card-body">
+                        <div class="exam-icon-big"><i class="ph-fill ph-notepad"></i></div>
+                        <h3>Exámenes Oficiales CEPREUNA</h3>
+                        <p>Material recopilado de las evaluaciones del Centro Preuniversitario de la UNAP. Ideal para practicar el estilo de preguntas y la distribución de temas exacta del examen.</p>
+                        <div class="exam-details">
+                            <span><i class="ph ph-files"></i> 1 archivo recopilado</span>
+                            <span><i class="ph ph-check-circle"></i> Fuente: Wilson Sadness</span>
+                        </div>
+                    </div>
+                    <div class="exam-card-footer">
+                        <button class="btn-exam-download" onclick="descargarExamen('CEPREUNA')">
+                            <i class="ph ph-download-simple"></i> ARCHIVO EXAMENES CEPREUNA
+                        </button>
+                    </div>
+                </div>
+
+                <div class="exam-card unsa">
+                    <div class="exam-card-header">
+                        <div class="exam-badge-uni" style="background:#dc2626;">UNSA</div>
+                        <span>Universidad Nacional de San Agustín · Arequipa</span>
+                    </div>
+                    <div class="exam-card-body">
+                        <div class="exam-icon-big"><i class="ph-fill ph-book-open-text"></i></div>
+                        <h3>Banco de Exámenes de Admisión UNSA</h3>
+                        <p>Exámenes de admisión de la UNSA disponibles para practicar. Muy valorados porque su nivel de exigencia es similar al examen de la UNAP.</p>
+                        <div class="exam-details">
+                            <span><i class="ph ph-files"></i> 1 archivo recopilado</span>
+                            <span><i class="ph ph-check-circle"></i> Fuente: Wilson Sadness</span>
+                        </div>
+                    </div>
+                    <div class="exam-card-footer">
+                        <button class="btn-exam-download" onclick="descargarExamen('UNSA')">
+                            <i class="ph ph-download-simple"></i> ARCHIVO EXAMENES UNSA
+                        </button>
+                    </div>
+                </div>
+
+                <div class="exam-card temario">
+                    <div class="exam-card-header">
+                        <div class="exam-badge-uni" style="background:#059669;">TEMARIO</div>
+                        <span>Temario Oficial UNAP 2026</span>
+                    </div>
+                    <div class="exam-card-body">
+                        <div class="exam-icon-big"><i class="ph-fill ph-list-checks"></i></div>
+                        <h3>Temario Actualizado UNAP 2026</h3>
+                        <p>El temario oficial y actualizado del proceso de admisión de la UNAP para el año 2026. <strong>Imprescindible</strong> para saber exactamente qué temas entran y cuáles no.</p>
+                        <div class="exam-details">
+                            <span><i class="ph ph-calendar"></i> Actualizado 2026</span>
+                            <span><i class="ph ph-star"></i> Material prioritario</span>
+                        </div>
+                    </div>
+                    <div class="exam-card-footer">
+                        <button class="btn-exam-download btn-accent" onclick="descargarExamen('TEMARIO')">
+                            <i class="ph-fill ph-download-simple"></i> Descargar Temario Oficial 2026
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+                            <!-- Tarjeta San Marcos -->
+                <div class="exam-card sanmarcos">
+                    <div class="exam-card-header">
+                        <div class="exam-badge-uni" style="background:#0284c7;">UNMSM</div>
+                        <span>Universidad Nacional Mayor de San Marcos</span>
+                    </div>
+                    <div class="exam-card-body">
+                        <div class="exam-icon-big"><i class="ph-fill ph-graduation-cap"></i></div>
+                        <h3>Banco de Preguntas San Marcos</h3>
+                        <p>Colección de preguntas y problemas tipo admisión UNMSM (Colección Siglo XXI). Abarca todas las áreas de ciencias, matemáticas y letras.</p>
+                        <div class="exam-details">
+                            <span><i class="ph ph-files"></i> Colección Siglo XXI</span>
+                            <span><i class="ph ph-check-circle"></i> Nivel Preuniversitario</span>
+                        </div>
+                    </div>
+                    <div class="exam-card-footer">
+                        <button class="btn-exam-download" onclick="descargarExamen('BANCO_SM')">
+                            <i class="ph ph-download-simple"></i> Descargar Banco San Marcos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta RACSO -->
+                <div class="exam-card racso">
+                    <div class="exam-card-header">
+                        <div class="exam-badge-uni" style="background:#d97706;">RACSO</div>
+                        <span>Razonamiento Matemático de Alto Nivel</span>
+                    </div>
+                    <div class="exam-card-body">
+                        <div class="exam-icon-big"><i class="ph-fill ph-brain"></i></div>
+                        <h3>RM RACSO Completo</h3>
+                        <p>El compendio legendario de Razonamiento Matemático RACSO (recopilación Wilson Sadness). El material más cotizado para asegurar el puntaje en RM.</p>
+                        <div class="exam-details">
+                            <span><i class="ph ph-star"></i> Muy recomendado</span>
+                            <span><i class="ph ph-check-circle"></i> Fuente: Wilson Sadness</span>
+                        </div>
+                    </div>
+                    <div class="exam-card-footer">
+                        <button class="btn-exam-download" onclick="descargarExamen('RM_RACSO')">
+                            <i class="ph ph-download-simple"></i> Descargar RM RACSO
+                        </button>
+                    </div>
+                </div>
+
+            <!-- TAMBIÉN: Banco de preguntas San Marcos -->
+            <div class="also-section">
+                <h3><i class="ph ph-plus-circle"></i> También disponible:</h3>
+                <div class="also-grid">
+                    <div class="also-chip" onclick="descargarExamen('BANCO_SM')">
+                        <i class="ph-fill ph-question"></i>
+                        <div>
+                            <strong>Banco de Preguntas</strong>
+                            <span>San Marcos · Colección Siglo XXI</span>
+                        </div>
+                        <i class="ph ph-download-simple"></i>
+                    </div>
+                    <div class="also-chip" onclick="descargarExamen('RM_RACSO')">
+                        <i class="ph-fill ph-brain"></i>
+                        <div>
+                            <strong>RM RACSO</strong>
+                            <span>Razonamiento Matemático Completo</span>
+                        </div>
+                        <i class="ph ph-download-simple"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TAB 3: FORMULARIOS INSANOS ===== -->
+        <section id="tab-formularios" class="content-section">
+            <div class="form-hero">
+                <div class="lightning-bg">⚡</div>
+                <div class="form-hero-content">
+                    <h2>Formularios Insanos <span>by Wilson Sadness</span></h2>
+                    <p>Los formularios más completos y usados por preuniversitarios en todo el Perú. Una hoja por materia con <strong>todas las fórmulas clave</strong> que necesitas para el examen de admisión. Imprímelos, pégatelos en tu cuarto, memorízalos.</p>
+                </div>
+            </div>
+
+            <div class="formulas-grid">
+                <div class="formula-card" onclick="descargarFormulario('ARITMETICA')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#7c3aed,#a855f7)">Σ</div>
+                    <div class="formula-body">
+                        <h4>Aritmética</h4>
+                        <p>Numeración, divisibilidad, MCD, MCM, fracciones, porcentajes, proporciones y más.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+
+                <div class="formula-card" onclick="descargarFormulario('ALGEBRA')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#2563eb,#3b82f6)">X²</div>
+                    <div class="formula-body">
+                        <h4>Álgebra</h4>
+                        <p>Productos notables, factorización, ecuaciones, matrices, logaritmos, binomio de Newton.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+
+                <div class="formula-card" onclick="descargarFormulario('GEOMETRIA_PLANA')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#0891b2,#06b6d4)">△</div>
+                    <div class="formula-body">
+                        <h4>Geometría Plana</h4>
+                        <p>Ángulos, triángulos, polígonos, circunferencia, áreas, relaciones métricas.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+
+                <div class="formula-card" onclick="descargarFormulario('GEOMETRIA_ESPACIO')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#0d9488,#14b8a6)">◻</div>
+                    <div class="formula-body">
+                        <h4>Geometría del Espacio</h4>
+                        <p>Poliedros, prismas, pirámides, cilindros, conos, esferas. Áreas y volúmenes.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+
+                <div class="formula-card" onclick="descargarFormulario('TRIGONOMETRIA')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#d97706,#f59e0b)">sin</div>
+                    <div class="formula-body">
+                        <h4>Trigonometría</h4>
+                        <p>Razones trigonométricas, identidades, arcos múltiples, resolución de triángulos.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+
+                <div class="formula-card" onclick="descargarFormulario('FISICA')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#dc2626,#ef4444)">F=ma</div>
+                    <div class="formula-body">
+                        <h4>Física</h4>
+                        <p>Cinemática, dinámica, trabajo, energía, ondas, electrostática, óptica y más.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+
+                <div class="formula-card" onclick="descargarFormulario('QUIMICA')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#059669,#10b981)">⚗</div>
+                    <div class="formula-body">
+                        <h4>Química</h4>
+                        <p>Nomenclatura, estequiometría, gases, soluciones, electroquímica, orgánica.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+
+                <div class="formula-card" onclick="descargarFormulario('RAZONAMIENTO_MAT')">
+                    <div class="formula-icon" style="background: linear-gradient(135deg,#7c3aed,#6366f1)">RM</div>
+                    <div class="formula-body">
+                        <h4>Razonamiento Matemático</h4>
+                        <p>Series, sucesiones, conteo de figuras, cronometría, operaciones matemáticas y más.</p>
+                    </div>
+                    <button class="formula-dl"><i class="ph ph-download-simple"></i> Descargar</button>
+                </div>
+            </div>
+
+            <div class="formulas-note">
+                <i class="ph-fill ph-info"></i>
+                <span>Los formularios son de <strong>Wilson Sadness</strong>, el compilador de material preuniversitario más conocido del Perú. Todos los formularios de esta sección corresponden a la colección <em>"FORMULARIO INSANO"</em>.</span>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <div>
+                <strong>🏔️ Fleur Lenny</strong> · Fleur Lenny · Puno, Perú · Año Académico 2026
+            </div>
+            <div class="footer-right">
+                <a href="https://www.youtube.com/watch?v=w4iTbDluHfY" target="_blank" class="easter-egg-btn" title="Modo Café">☕</a>
+                Material Pre-U organizado para <strong>UNAP · CEPREUNA · UNSA</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="rutas.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
