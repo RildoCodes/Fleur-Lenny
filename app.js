@@ -472,66 +472,8 @@ function descargarFormulario(tipo) {
         descargarPDFDirecto(ruta, ruta.split("/").pop());
     }
 }
-);
-}
-;
-    iniciarTimer();
-    renderPregunta();
-    renderDots();
-}
-    }, 1000);
-}
-:${s}`;
-}
- de ${total}`;
-        ? `Finalizar <i class="ph ph-check"></i>`
-        : `Siguiente <i class="ph ph-arrow-right"></i>`;
-        <span class="q-badge ${areaToTag(q.area)}">${q.area}</span>
-        <div class="q-prompt">${q.enunciado}</div>
-        <div class="options">
-            ${Object.entries(q.opciones).map(([letra, texto]) => `
-                <div class="option ${sel === letra ? "selected" : ""}" onclick="elegirOpcion(${q.id},'${letra}')">
-                    <span class="opt-letter">${letra}</span>
-                    <span class="opt-text">${texto}</span>
-                </div>`).join("")}
-        </div>`;
-    renderDots();
-}
-" onclick="irSim(${i})" title="Pregunta ${i+1}"></span>`;
-    }).join("");
-}
- }
-);
-    const aprobado = nota >= 11;
-    res.style.display = "block";
-    res.innerHTML = `
-        <div class="score-hero">
-            <div class="score-num">${nota} / 20</div>
-            <div class="score-label ${aprobado ? "score-ok" : "score-bad"}">
-                ${aprobado ? "✅ ¡APROBADO! Vas bien encaminado." : "❌ NECESITAS REPASAR — Revisa el solucionario"}
-            </div>
-        </div>
-        <h3 style="font-family:var(--font-h);margin-bottom:1rem;color:#1e3a8a;">
-            <i class="ph ph-check-square-offset"></i> Solucionario y Explicaciones:
-        </h3>
-        <div class="review-list">
-                const ok = marc === q.correcta;
-                return `
-                    <div class="review-item ${ok ? "ok" : "bad"}">
-                        <div class="review-q">Pregunta ${i+1}: ${q.enunciado}</div>
-                        <div class="review-ans">Tu respuesta: <strong>${marc}</strong>
-                            ${ok ? " ✅ Correcta" : ` ❌ Incorrecta — La respuesta correcta es: <strong>${q.correcta}</strong>`}
-                        </div>
-                        <div class="review-exp"><strong>💡 Explicación:</strong> ${q.explicacion}</div>
-                    </div>`;
-            }).join("")}
-        </div>
-        <div style="text-align:center">
-            <button class="btn-start-sim" onclick="reiniciarSim()">
-                <i class="ph ph-arrow-counter-clockwise"></i> Intentar otro simulacro
-            </button>
-        </div>`;
-}
+
+
 function setupEasterEgg() {
     const logoEgg = document.getElementById("secretLogoEgg");
     if (logoEgg) {
