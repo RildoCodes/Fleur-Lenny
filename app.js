@@ -1,14 +1,4 @@
-/**
- * FLEUR LENNY — Motor v2.0
- * Catálogo completo mapeado desde los archivos ZIP de E:\biblioUNAP
- * Fleur · Puno, Perú · 2026
- */
-
-// ===================== CATÁLOGO REAL DE LIBROS =====================
-// Mapeado desde la "BIBLIOTECA Insanos" (322 archivos en 8 ZIPs)
 const CATALOGO = [
-
-    // ───────── LUMBRERAS – SERIES ROJAS ─────────
     { id: 1, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/Aritmética.PDF",  titulo: "Aritmética (Serie Roja Lumbreras)",                    area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Libro rojo de Aritmética de la serie Ciencias y Humanidades. Numeración, divisibilidad, MCD, MCM, fracciones, porcentajes, proporciones." },
     { id: 2, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/Álgebra I.pdf",  titulo: "Álgebra I (Serie Roja Lumbreras)",                     area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Álgebra tomo I. Polinomios, productos notables, factorización, ecuaciones, inecuaciones." },
     { id: 3, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/Álgebra II.pdf",  titulo: "Álgebra II (Serie Roja Lumbreras)",                    area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Álgebra tomo II. Sistemas de ecuaciones, matrices, logaritmos, progresiones, binomio de Newton." },
@@ -16,8 +6,6 @@ const CATALOGO = [
     { id: 5, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/Física II.pdf",  titulo: "Física II (Serie Roja Lumbreras)",                     area: "Física",     editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Fluidos, calor, termodinámica, ondas mecánicas, sonido." },
     { id: 6, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/Física III.pdf",  titulo: "Física III (Serie Roja Lumbreras)",                    area: "Física",     editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Electricidad, magnetismo, ondas electromagnéticas, óptica, física moderna." },
     { id: 7, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/Geometría II - Estereometría.pdf",  titulo: "Geometría II – Estereometría (Serie Roja Lumbreras)",  area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Geometría del espacio: poliedros, prismas, pirámides, cilindros, conos, esferas. Áreas y volúmenes." },
-
-    // ───────── LUMBRERAS – SERIES ROJAS (Tomos C&H) ─────────
     { id: 8, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/libros y solucionarios ROJOS/Álgebra Tomo I - Ciencias y Humanidades.pdf",  titulo: "Álgebra Tomo I – Ciencias y Humanidades (Lumbreras)",   area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Tomo de álgebra C&H. Conjuntos, lógica, relaciones, funciones, ecuaciones." },
     { id: 9, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/libros y solucionarios ROJOS/Álgebra Tomo II - Ciencias y Humanidades.pdf",  titulo: "Álgebra Tomo II – Ciencias y Humanidades (Lumbreras)",  area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Tomo de álgebra C&H. Polinomios avanzados, progresiones, matrices, determinantes." },
     { id: 10, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/libros y solucionarios ROJOS/Álgebra Problemas Resueltos Tomo I - Ciencias y Humanidades.pdf", titulo: "Álgebra Problemas Resueltos Tomo I – C&H (Lumbreras)", area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Solucionario", desc: "Problemas resueltos paso a paso de álgebra, nivel admisión." },
@@ -37,14 +25,10 @@ const CATALOGO = [
     { id: 24, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/libros y solucionarios ROJOS/Química Problemas Resueltos Tomo II - Ciencias y Humanidades.pdf", titulo: "Química Problemas Resueltos Tomo II – C&H",            area: "Química",    editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Solucionario", desc: "Solucionario de Química Tomo II con ejercicios tipo admisión." },
     { id: 25, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/libros y solucionarios ROJOS/Aritmética Problemas Resueltos - Ciencias y Humanidades.pdf", titulo: "Aritmética Problemas Resueltos – C&H",                 area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Solucionario", desc: "Solucionario de Aritmética Lumbreras con cada paso del procedimiento." },
     { id: 26, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/libros y solucionarios ROJOS/Trigonometría Problemas Resueltos - Ciencias y Humanidades.pdf", titulo: "Trigonometría Problemas Resueltos – C&H",              area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Solucionario", desc: "Problemas resueltos de trigonometría incluyendo identidades y resolución de triángulos." },
-
-    // ───────── LUMBRERAS – NUEVOS ROJOS ─────────
     { id: 27, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/NUEVOS ROJOS/(NUEVO) Álgebra.pdf", titulo: "(NUEVO) Álgebra – Lumbreras",                          area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Nueva edición actualizada del libro rojo de álgebra Lumbreras." },
     { id: 28, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/NUEVOS ROJOS/(NUEVO) Aritmética.pdf", titulo: "(NUEVO) Aritmética – Lumbreras",                       area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Nueva edición actualizada del libro rojo de aritmética Lumbreras." },
     { id: 29, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/NUEVOS ROJOS/(NUEVO) Trigonometría.pdf", titulo: "(NUEVO) Trigonometría – Lumbreras",                    area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Nueva edición de trigonometría con ejercicios actualizados." },
     { id: 30, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/NUEVOS ROJOS/(NUEVO) Geometría plana.pdf", titulo: "(NUEVO) Geometría Plana – Lumbreras",                  area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Libro",       desc: "Nueva edición de geometría plana. Incluye cónicas y geometría analítica." },
-
-    // ───────── LUMBRERAS – ESENCIALES ─────────
     { id: 31, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ESENCIALES - LUMBRERAS/sol aritmética-esencial.pdf", titulo: "Aritmética Esencial – Lumbreras",                      area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Compendio esencial con lo más importante de aritmética para admisión." },
     { id: 32, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ESENCIALES - LUMBRERAS/sol algebra-esencial.pdf", titulo: "Álgebra Esencial – Lumbreras",                         area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Compendio de álgebra en un solo volumen para repaso intensivo." },
     { id: 33, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ESENCIALES - LUMBRERAS/Geometría.pdf", titulo: "Geometría Esencial – Lumbreras",                       area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Todo lo esencial de geometría plana y del espacio." },
@@ -59,8 +43,6 @@ const CATALOGO = [
     { id: 42, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ESENCIALES - LUMBRERAS/sol trigonometría-esencial.pdf", titulo: "Solucionario Trigonometría Esencial – Lumbreras",      area: "Matemática", editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Solucionario", desc: "Solucionario de trigonometría esencial Lumbreras." },
     { id: 43, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ESENCIALES - LUMBRERAS/sol física-esencial.pdf", titulo: "Solucionario Física Esencial – Lumbreras",             area: "Física",     editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Solucionario", desc: "Solucionario del compendio esencial de física Lumbreras." },
     { id: 44, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ESENCIALES - LUMBRERAS/sol Química-esencial.pdf", titulo: "Solucionario Química Esencial – Lumbreras",            area: "Química",    editorial: "Lumbreras", modalidad: "Ingenierias", tipo: "Solucionario", desc: "Solucionario oficial de química esencial Lumbreras." },
-
-    // ───────── LUMBRERAS – SERIES AZULES (Sociales) ─────────
     { id: 45, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/Lumbreras - azules/ARITMÉTICA Y ÁLGEBRA NUEVO.pdf", titulo: "Aritmética y Álgebra – Lumbreras Azul",                area: "Matemática", editorial: "Lumbreras", modalidad: "Sociales",    tipo: "Compendio",   desc: "Compendio azul de Matemática para la modalidad de Sociales y Biomédicas." },
     { id: 46, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/Lumbreras - azules/ARITMÉTICA Y ÁLGEBRA NUEVO.pdf", titulo: "Aritmética y Álgebra NUEVO – Lumbreras Azul",          area: "Matemática", editorial: "Lumbreras", modalidad: "Sociales",    tipo: "Compendio",   desc: "Nueva edición del compendio azul de Aritmética y Álgebra." },
     { id: 47, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/Lumbreras - azules/GEOMETRÍA Y TRIGONOMETRÍA.pdf", titulo: "Geometría y Trigonometría – Lumbreras Azul",           area: "Matemática", editorial: "Lumbreras", modalidad: "Sociales",    tipo: "Compendio",   desc: "Geometría y trigonometría para la modalidad de Sociales/Biomédicas." },
@@ -79,8 +61,6 @@ const CATALOGO = [
     { id: 60, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/Lumbreras - azules/Economía - Enfoque Social - Lumbreras.pdf", titulo: "Economía (Enfoque Social) – Lumbreras Azul",           area: "Letras",     editorial: "Lumbreras", modalidad: "Sociales",    tipo: "Compendio",   desc: "Economía con enfoque en política económica, mercado, macroeconomía." },
     { id: 61, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/Lumbreras - azules/FILOSOFÍA(1).pdf", titulo: "Filosofía – Lumbreras Azul",                           area: "Letras",     editorial: "Lumbreras", modalidad: "Sociales",    tipo: "Compendio",   desc: "Lógica, epistemología, ética y grandes corrientes filosóficas." },
     { id: 62, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/Lumbreras - azules/PSICOLOGIA.pdf", titulo: "Psicología – Lumbreras Azul",                          area: "Letras",     editorial: "Lumbreras", modalidad: "Sociales",    tipo: "Compendio",   desc: "Psicología general, motivación, aprendizaje, percepción, personalidad." },
-
-    // ───────── CUZCANO – POR TOMOS (ÁLGEBRA) ─────────
     { id: 63, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ALGEBRA/División de polinomios.pdf", titulo: "Cuzcano Álgebra – Polinomios",                         area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Operaciones con polinomios, valor numérico, grado y términos semejantes." },
     { id: 64, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ALGEBRA/Productos notables.pdf", titulo: "Cuzcano Álgebra – Productos Notables",                 area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Todos los productos notables con ejercicios aplicados." },
     { id: 65, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ALGEBRA/Factorización de polinomios.pdf", titulo: "Cuzcano Álgebra – Factorización de Polinomios",        area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Métodos de factorización: factor común, agrupación, trinomio, suma de cubos." },
@@ -93,8 +73,6 @@ const CATALOGO = [
     { id: 72, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ALGEBRA/Matrices.pdf", titulo: "Cuzcano Álgebra – Matrices",                           area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Operaciones matriciales, determinantes, inversas y sistemas con matrices." },
     { id: 73, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ALGEBRA/Binomio de Newton.pdf", titulo: "Cuzcano Álgebra – Binomio de Newton",                  area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Teorema del binomio, coeficiente binomial, término general y medio." },
     { id: 74, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ALGEBRA/Números complejos.pdf", titulo: "Cuzcano Álgebra – Números Complejos",                  area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Operaciones con números complejos, forma polar y fórmula de De Moivre." },
-
-    // ───────── CUZCANO – ARITMÉTICA ─────────
     { id: 75, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ARITMÉTICA/Numeración.pdf", titulo: "Cuzcano Aritmética – Numeración",                      area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Sistemas de numeración, bases, conversión y operaciones." },
     { id: 76, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ARITMÉTICA/Números primos.pdf", titulo: "Cuzcano Aritmética – Números Primos",                  area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Criba de Eratóstenes, criterios de divisibilidad, factorización prima." },
     { id: 77, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ARITMÉTICA/Divisibilidad.pdf", titulo: "Cuzcano Aritmética – Divisibilidad",                   area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Criterios de divisibilidad, MCD, MCM y sus aplicaciones." },
@@ -113,8 +91,6 @@ const CATALOGO = [
     { id: 90, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ARITMÉTICA/Estadística.pdf", titulo: "Cuzcano Aritmética – Estadística",                     area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Estadística descriptiva: frecuencias, medidas de tendencia y dispersión." },
     { id: 91, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ARITMÉTICA/Magnitudes proporcionales.pdf", titulo: "Cuzcano Aritmética – Magnitudes Proporcionales",       area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Proporcionalidad directa e inversa. Gráficas y tablas." },
     { id: 92, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - ARITMÉTICA/Teoría de conjuntos.pdf", titulo: "Cuzcano Aritmética – Teoría de Conjuntos",             area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Conjuntos, operaciones, diagramas de Venn y problemas aplicados." },
-
-    // ───────── CUZCANO – TRIGONOMETRÍA ─────────
     { id: 93, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - TRIGONOMETRÍA/01 Sistema de medición angular y longitud de arco.pdf", titulo: "Cuzcano Trigonometría – Sistema Angular y Longitud de Arco", area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo", desc: "Ángulo trigonométrico, medición sexagesimal, centesimal y radián." },
     { id: 94, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - TRIGONOMETRÍA/02 RT de un ángulo agudo.pdf", titulo: "Cuzcano Trigonometría – RT de un Ángulo Agudo",               area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo", desc: "Razones trigonométricas en triángulo rectángulo y ángulos notables." },
     { id: 95, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - TRIGONOMETRÍA/03 RT de un ángulo en posición normal.pdf", titulo: "Cuzcano Trigonometría – RT en Posición Normal",               area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo", desc: "Razones trigonométricas en posición normal y cuadrantes." },
@@ -128,8 +104,6 @@ const CATALOGO = [
     { id: 103, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - TRIGONOMETRÍA/11 Ecuaciones e inecuaciones.pdf",titulo: "Cuzcano Trigonometría – Ecuaciones e Inecuaciones",           area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo", desc: "Solución de ecuaciones trigonométricas con solución general y particular." },
     { id: 104, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - TRIGONOMETRÍA/12 Resolución de triángulos oblicuángulos.pdf",titulo: "Cuzcano Trigonometría – Resolución de Triángulos Oblicuángulos", area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo", desc: "Ley de senos, ley de cosenos y área de triángulo con aplicaciones." },
     { id: 105, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - TRIGONOMETRÍA/13 Números complejos.pdf",titulo: "Cuzcano Trigonometría – Números Complejos",                   area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo", desc: "Representación polar, forma trigonométrica y fórmula de De Moivre." },
-
-    // ───────── CUZCANO – GEOMETRÍA (3 Colecciones) ─────────
     { id: 106, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - GEOMETRÍA/Cuzcano Geometría - Colección 1/01 Línea recta y ángulos.pdf",titulo: "Cuzcano Geometría – Línea Recta y Ángulos",            area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Segmentos, rectas paralelas, ángulos y propiedades fundamentales." },
     { id: 107, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - GEOMETRÍA/Cuzcano Geometría - Colección 1/02 Triángulos.pdf",titulo: "Cuzcano Geometría – Triángulos",                       area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Clasificación, congruencia, semejanza y propiedades de triángulos." },
     { id: 108, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - GEOMETRÍA/Cuzcano Geometría - Colección 1/03 Polígonos.pdf",titulo: "Cuzcano Geometría – Polígonos",                        area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Cuadriláteros, polígonos regulares y sus propiedades." },
@@ -149,8 +123,6 @@ const CATALOGO = [
     { id: 122, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - GEOMETRÍA/Cuzcano Geometría - Colección 3/Geometría del espacio II.pdf",titulo: "Cuzcano Geometría del Espacio II",                     area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Esfera, sólidos de revolución y propiedades geométricas del espacio." },
     { id: 123, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - GEOMETRÍA/Cuzcano Geometría - Colección 1/14 Esfera.pdf",titulo: "Cuzcano Geometría – Esfera",                           area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Esfera: ecuación, área, volumen, secciones y relaciones con poliedros." },
     { id: 124, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - GEOMETRÍA/Cuzcano Geometría - Colección 3/GA 6 Transformación de coordenadas.pdf",titulo: "Cuzcano Geometría – Transformación de Coordenadas",    area: "Matemática", editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Rotación, traslación y reflexión de ejes cartesianos. Coordenadas polares." },
-
-    // ───────── CUZCANO – FÍSICA ─────────
     { id: 125, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - FÍSICA/01 Análisis dimensional.pdf",titulo: "Cuzcano Física – Análisis Dimensional",                area: "Física",     editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Magnitudes físicas, unidades SI, homogeneidad dimensional y conversiones." },
     { id: 126, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - FÍSICA/03 Cinemática I - MRU - MRUV.pdf",titulo: "Cuzcano Física – Cinemática I (MRU y MRUV)",          area: "Física",     editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Movimiento rectilíneo uniforme y uniformemente acelerado. Gráficas y ecuaciones." },
     { id: 127, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - FÍSICA/04 Cinemática II - MVCL - MPCL.pdf",titulo: "Cuzcano Física – Cinemática II (MVCL y MPCL)",        area: "Física",     editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Movimiento vertical con caída libre y movimiento parabólico." },
@@ -173,8 +145,6 @@ const CATALOGO = [
     { id: 144, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - FÍSICA/21 Ondas Electromagnéticas.pdf",titulo: "Cuzcano Física – Ondas Electromagnéticas",             area: "Física",     editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Espectro electromagnético, ondas de radio, microondas, luz visible." },
     { id: 145, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - FÍSICA/22 Óptica.pdf",titulo: "Cuzcano Física – Óptica",                              area: "Física",     editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Reflexión, refracción, lentes, espejos y fenómenos ópticos." },
     { id: 146, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - FÍSICA/23 Física Moderna.pdf",titulo: "Cuzcano Física – Física Moderna",                      area: "Física",     editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Relatividad especial, efecto fotoeléctrico, modelo atómico y radiactividad." },
-
-    // ───────── CUZCANO – QUÍMICA ─────────
     { id: 147, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - QUÍMICA/Teoría atómica.pdf",titulo: "Cuzcano Química – Teoría Atómica",                     area: "Química",    editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Modelos atómicos, configuración electrónica y números cuánticos." },
     { id: 148, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - QUÍMICA/Nomenclatura inorgánica.pdf",titulo: "Cuzcano Química – Nomenclatura Inorgánica",            area: "Química",    editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Óxidos, hidróxidos, ácidos y sales. IUPAC, Stock y tradicional." },
     { id: 149, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - QUÍMICA/Unidades químicas de masa(1).pdf",titulo: "Cuzcano Química – Unidades Químicas de Masa",          area: "Química",    editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Mol, masa molar, número de Avogadro y cálculos estequiométricos básicos." },
@@ -185,8 +155,6 @@ const CATALOGO = [
     { id: 154, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - QUÍMICA/Reacciones químicas.pdf",titulo: "Cuzcano Química – Reacciones Químicas",                area: "Química",    editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Tipos de reacciones, energía de activación y equilibrio químico." },
     { id: 155, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - QUÍMICA/Electroquímica.pdf",titulo: "Cuzcano Química – Electroquímica",                     area: "Química",    editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Celdas galvánicas y electrolíticas, potencial estándar de reducción." },
     { id: 156, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/CUZCANO - POR TOMOS/CUZCANO - QUÍMICA/Química orgánica(1).pdf",titulo: "Cuzcano Química – Química Orgánica",                   area: "Química",    editorial: "Cuzcano", modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Hidrocarburos, grupos funcionales, nomenclatura IUPAC de compuestos orgánicos." },
-
-    // ───────── RODO EDITORIAL ─────────
     { id: 157, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/Aritmética.pdf",titulo: "RODO – Aritmética",                                    area: "Matemática", editorial: "RODO",     modalidad: "Ingenierias", tipo: "Libro",       desc: "Libro completo de aritmética de la editorial RODO con enfoque preuniversitario." },
     { id: 158, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/Álgebra.pdf",titulo: "RODO – Álgebra",                                       area: "Matemática", editorial: "RODO",     modalidad: "Ingenierias", tipo: "Libro",       desc: "Álgebra con teoría y ejercicios resueltos estilo RODO." },
     { id: 159, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/Geometria.pdf",titulo: "RODO – Geometría",                                     area: "Matemática", editorial: "RODO",     modalidad: "Ingenierias", tipo: "Libro",       desc: "Geometría plana y del espacio con ejercicios graduados por dificultad." },
@@ -202,8 +170,6 @@ const CATALOGO = [
     { id: 169, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/Geografía.pdf",titulo: "RODO – Geografía",                                     area: "Letras",     editorial: "RODO",     modalidad: "Ingenierias", tipo: "Libro",       desc: "Geografía del Perú y el mundo. Relieve, clima, hidrografía y recursos naturales." },
     { id: 170, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/Economía y Cívica.pdf",titulo: "RODO – Economía y Cívica",                             area: "Letras",     editorial: "RODO",     modalidad: "Ingenierias", tipo: "Libro",       desc: "Economía básica y cívica para la admisión universitaria. RODO." },
     { id: 171, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/Psicología, Filosofía y Lógica.pdf",titulo: "RODO – Psicología, Filosofía y Lógica",                area: "Letras",     editorial: "RODO",     modalidad: "Ingenierias", tipo: "Libro",       desc: "Tres materias en un solo volumen RODO: psicología, filosofía y lógica formal." },
-
-    // ───────── RODO – QUÍMICA POR TOMOS ─────────
     { id: 172, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/QUIMICA RODO/01 Materia y energía - Temperatura.pdf",titulo: "RODO Química – Materia y Energía / Temperatura",       area: "Química",    editorial: "RODO",     modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Propiedades de la materia, cambios de estado y temperatura." },
     { id: 173, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/QUIMICA RODO/03 Números cuánticos - Configuración electrónica.pdf",titulo: "RODO Química – Números Cuánticos y Config. Electrónica",area: "Química",   editorial: "RODO",     modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Modelo atómico, números cuánticos y configuración electrónica." },
     { id: 174, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/QUIMICA RODO/05 Formulación y nomenclatura inorgánica.pdf",titulo: "RODO Química – Formulación y Nomenclatura Inorgánica", area: "Química",    editorial: "RODO",     modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Formulación de óxidos, hidróxidos, ácidos y sales por los sistemas IUPAC y Stock." },
@@ -213,15 +179,11 @@ const CATALOGO = [
     { id: 178, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/QUIMICA RODO/15 Química orgánica I. Carbono, petróleo e hidrocarburos.pdf",titulo: "RODO Química – Química Orgánica I (Hidrocarburos)",     area: "Química",    editorial: "RODO",     modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Carbono, petróleo, alcanos, alquenos, alquinos y aromáticos." },
     { id: 179, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/QUIMICA RODO/16 Química orgánica II. Compuestos orgánicos oxigenados y nitrogenados.pdf",titulo: "RODO Química – Química Orgánica II (Ox. y Nitrogenados)",area: "Química",  editorial: "RODO",     modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Alcoholes, ácidos, ésteres, aminas y amidas. Orgánica II." },
     { id: 180, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/RODO - EDITORIAL/QUIMICA RODO/17 Contaminación ambiental.pdf",titulo: "RODO Química – Contaminación Ambiental",               area: "Química",    editorial: "RODO",     modalidad: "Ingenierias", tipo: "Fascículo",    desc: "Tipos de contaminación ambiental, consecuencias y alternativas de solución." },
-
-    // ───────── UNICIENCIA SAPIENS ─────────
     { id: 181, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/UNICIENCIA SAPIENS/Álgebra -Uniciencia Sapiens.pdf",titulo: "Uniciencia Sapiens – Álgebra",                         area: "Matemática", editorial: "Uniciencia", modalidad: "Ingenierias", tipo: "Libro",      desc: "Álgebra completa de Uniciencia Sapiens con teoría, ejemplos y ejercicios propuestos." },
     { id: 182, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/UNICIENCIA SAPIENS/Geometría - Uniciencia Sapiens.pdf",titulo: "Uniciencia Sapiens – Geometría",                       area: "Matemática", editorial: "Uniciencia", modalidad: "Ingenierias", tipo: "Libro",      desc: "Geometría plana y analítica de Uniciencia Sapiens." },
     { id: 183, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/UNICIENCIA SAPIENS/Trigonometría - Uniciencia Sapiens.pdf",titulo: "Uniciencia Sapiens – Trigonometría",                   area: "Matemática", editorial: "Uniciencia", modalidad: "Ingenierias", tipo: "Libro",      desc: "Trigonometría de Uniciencia Sapiens con ejercicios de dificultad progresiva." },
     { id: 184, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/UNICIENCIA SAPIENS/Física-Uniciencia Sapiens.pdf",titulo: "Uniciencia Sapiens – Física",                          area: "Física",     editorial: "Uniciencia", modalidad: "Ingenierias", tipo: "Libro",      desc: "Física completa de Uniciencia Sapiens con énfasis en problemas de admisión." },
     { id: 185, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/UNICIENCIA SAPIENS/Química - Uniciencia Sapiens.pdf",titulo: "Uniciencia Sapiens – Química",                         area: "Química",    editorial: "Uniciencia", modalidad: "Ingenierias", tipo: "Libro",      desc: "Química Uniciencia Sapiens: teoría completa con ejercicios tipo admisión." },
-
-    // ───────── SAN MARCOS / SIGLO XXI ─────────
     { id: 186, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Álgebra.pdf",titulo: "San Marcos – Álgebra (Siglo XXI)",                     area: "Matemática", editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",    desc: "Álgebra de la colección Siglo XXI San Marcos para Sociales y Biomédicas." },
     { id: 187, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Razonamiento matemático.pdf",titulo: "San Marcos – Razonamiento Matemático (Siglo XXI)",     area: "Razonamiento", editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",  desc: "RM de la colección San Marcos Siglo XXI con ejercicios tipo UNMSM." },
     { id: 188, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Razonamiento verbal.pdf",titulo: "San Marcos – Razonamiento Verbal (Siglo XXI)",         area: "Letras",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",    desc: "Razonamiento Verbal San Marcos: comprensión, vocabulario y análisis textual." },
@@ -236,8 +198,6 @@ const CATALOGO = [
     { id: 197, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Economía.pdf",titulo: "San Marcos – Economía (Siglo XXI)",                    area: "Letras",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",    desc: "Economía básica, mercado, macroeconomía y economía peruana." },
     { id: 198, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Psicotécnico.pdf",titulo: "San Marcos – Psicotécnico (Siglo XXI)",                area: "Razonamiento", editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",  desc: "Psicotécnico, series, analogías y razonamiento abstracto San Marcos." },
     { id: 199, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Banco de preguntas.pdf",titulo: "San Marcos – Banco de Preguntas",                      area: "Razonamiento", editorial: "San Marcos", modalidad: "Sociales", tipo: "Banco",       desc: "Gran banco de preguntas de todas las áreas. Colección Siglo XXI." },
-
-    // ───────── WILSON SADNESS – RAZONAMIENTO MATEMÁTICO ─────────
     { id: 200, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM RACSO.pdf",titulo: "RM RACSO (Wilson Sadness)",                            area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Razonamiento Matemático RACSO recopilado por Wilson Sadness. Muy recomendado." },
     { id: 201, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM Lumbreras Compendios Académicos.pdf",titulo: "RM Lumbreras Compendios Académicos (Wilson)",          area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Razonamiento Matemático Lumbreras Compendios Académicos." },
     { id: 202, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM Lumbreras Propedéutica para las ciencias.pdf",titulo: "RM Lumbreras Propedéutica para las Ciencias (Wilson)",  area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",  desc: "RM propedéutico de Lumbreras para ciencias exactas." },
@@ -253,8 +213,6 @@ const CATALOGO = [
     { id: 212, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RAZONAMIENTO MATEMÁTICO Lumbreras - otra edición.pdf",titulo: "NUEVO RM Lumbreras – Otra Edición (Wilson)",           area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Nueva edición alternativa del RM Lumbreras recopilada por Wilson Sadness." },
     { id: 213, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/NUEVO Razonamiento Matemático lumbreras.pdf",titulo: "NUEVO Razonamiento Matemático Lumbreras (Wilson)",     area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Nueva versión del RM Lumbreras con ejercicios actualizados." },
     { id: 214, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/LIBRO RM - nuevo.pdf",titulo: "LIBRO RM nuevo (Wilson Sadness)",                      area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Nuevo libro de RM recopilado por Wilson Sadness." },
-
-    // ───────── WILSON SADNESS – RM CUZCANO POR TOMOS ─────────
     { id: 215, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM - CUZCANO - POR TOMOS/01 Razonamiento lógico.pdf",titulo: "RM Cuzcano – 01 Razonamiento Lógico",                  area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Fascículo",   desc: "Primer fascículo: proposiciones, conectivos lógicos y tablas de verdad." },
     { id: 216, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM - CUZCANO - POR TOMOS/02 Inductivo - Deductivo.pdf",titulo: "RM Cuzcano – 02 Inductivo-Deductivo",                  area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Fascículo",   desc: "Razonamiento inductivo: series de letras, números y completar secuencias." },
     { id: 217, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM - CUZCANO - POR TOMOS/03 Planteo de ecuaciones.pdf",titulo: "RM Cuzcano – 03 Planteo de Ecuaciones",                area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Fascículo",   desc: "Problemas de planteo de ecuaciones, edades, dinero y mezclas." },
@@ -270,8 +228,6 @@ const CATALOGO = [
     { id: 227, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM - CUZCANO - POR TOMOS/13 Introducción al análisis combinatorio.pdf",titulo: "RM Cuzcano – 13 Análisis Combinatorio",                area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Fascículo",   desc: "Principio multiplicativo, permutaciones y combinaciones aplicados a RM." },
     { id: 228, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM - CUZCANO - POR TOMOS/14 Cálculo de probabilidades.pdf",titulo: "RM Cuzcano – 14 Cálculo de Probabilidades",            area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Fascículo",   desc: "Probabilidad clásica, condicional y uso en problemas de RM." },
     { id: 229, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM - CUZCANO - POR TOMOS/15 Razonamiento geométrico.pdf",titulo: "RM Cuzcano – 15 Razonamiento Geométrico",              area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Fascículo",   desc: "Ángulos, simetría y figuras geométricas en problemas de RM." },
-
-    // ───────── WILSON SADNESS – RAZONAMIENTO VERBAL ─────────
     { id: 230, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/NUEVO Razonamiento Matemático lumbreras.pdf",titulo: "Razonamiento Verbal – Lumbreras (Wilson)",             area: "Letras",     editorial: "Wilson", modalidad: "Sociales",    tipo: "Compendio",   desc: "RV Lumbreras recopilado por Wilson Sadness. Sinónimos, antónimos y comprensión." },
     { id: 231, ruta: "biblioteca_pdfs/libros/RAZ. VERBAL -  WILSON SADNESS/RV I celeste.pdf",titulo: "RV I Celeste – Lumbreras (Wilson Sadness)",            area: "Letras",     editorial: "Wilson", modalidad: "Sociales",    tipo: "Compendio",   desc: "Primer volumen celeste de Razonamiento Verbal Lumbreras." },
     { id: 232, ruta: "biblioteca_pdfs/libros/RAZ. VERBAL -  WILSON SADNESS/RV II celeste.pdf",titulo: "RV II Celeste – Lumbreras (Wilson Sadness)",           area: "Letras",     editorial: "Wilson", modalidad: "Sociales",    tipo: "Compendio",   desc: "Segundo volumen celeste de Razonamiento Verbal Lumbreras." },
@@ -279,8 +235,6 @@ const CATALOGO = [
     { id: 234, ruta: "biblioteca_pdfs/libros/RAZ. VERBAL -  WILSON SADNESS/Razonamiento verbal - nathali falcon vera.pdf",titulo: "RV – Razonamiento Verbal Nathali Falcón Vera",         area: "Letras",     editorial: "Wilson", modalidad: "Sociales",    tipo: "Compendio",   desc: "RV de Nathali Falcón Vera. Análisis textual y comprensión de lectura." },
     { id: 235, ruta: "biblioteca_pdfs/libros/RAZ. VERBAL -  WILSON SADNESS/LIBRO RV - nuevo lumbreras.pdf",titulo: "LIBRO RV Nuevo Lumbreras (Wilson Sadness)",            area: "Letras",     editorial: "Wilson", modalidad: "Sociales",    tipo: "Compendio",   desc: "Nueva edición del libro de Razonamiento Verbal Lumbreras." },
     { id: 236, ruta: "biblioteca_pdfs/libros/RAZ. VERBAL -  WILSON SADNESS/LIBRO RV - nuevo lumbreras.pdf",titulo: "RV – Lumbreras (colección azul) (Wilson Sadness)",     area: "Letras",     editorial: "Wilson", modalidad: "Sociales",    tipo: "Compendio",   desc: "RV azul de Lumbreras para la modalidad de Sociales." },
-
-    // ───────── SOCIALES / BIOMÉDICAS – VARIOS ─────────
     { id: 237, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/COMPENDIOS SAN MARCOS/Historia del Perú -  parte 1.pdf",titulo: "Historia del Perú Parte 1 (Compendios San Marcos)",    area: "Letras",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",   desc: "Desde el Poblamiento americano hasta la colonia. Primer volumen." },
     { id: 238, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/COMPENDIOS SAN MARCOS/Historia del Perú -  parte 2.pdf",titulo: "Historia del Perú Parte 2 (Compendios San Marcos)",    area: "Letras",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",   desc: "Emancipación, República del Perú hasta la época contemporánea." },
     { id: 239, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/COMPENDIOS SAN MARCOS/Historia Universal.pdf",titulo: "Historia Universal – San Marcos",                      area: "Letras",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",   desc: "Historia Universal San Marcos: de la Prehistoria al siglo XXI." },
@@ -310,98 +264,22 @@ const CATALOGO = [
     { id: 263, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/COMPENDIOS SAN MARCOS/Física.pdf",titulo: "Física – San Marcos Compendios",                       area: "Física",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",   desc: "Física San Marcos compendio para Sociales y Biomédicas." },
     { id: 264, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/COMPENDIOS SAN MARCOS/Geografía.pdf",titulo: "Geografía – San Marcos Compendios",                    area: "Letras",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",   desc: "Geografía San Marcos compendio con regiones naturales y geopolítica." }
 ];
-
-// ===================== PREGUNTAS DEL SIMULACRO =====================
-const PREGUNTAS = [
-    {
-        id: 1, ruta: "biblioteca_pdfs/libros/PRE U Libros INGENIERIAS/ROJOS - LUMBRERAS/Aritmética.PDF", area: "Matemática",
-        enunciado: "Desde la cima de una torre a 40 m de altura en el malecón de Puno, se divisa una embarcación con un ángulo de depresión de 45°. ¿A qué distancia horizontal está la embarcación de la base de la torre?",
-        opciones: { A: "20 m", B: "40 m", C: "40√2 m", D: "80 m" },
-        correcta: "B",
-        explicacion: "Con ángulo de depresión de 45°, el triángulo rectángulo formado tiene cateto opuesto (altura) = cateto adyacente (distancia). Entonces: d = 40 m × cot(45°) = 40 × 1 = 40 m."
-    },
-    {
-        id: 2, area: "Matemática",
-        enunciado: "Si sen(θ) = 3/5 y θ es un ángulo agudo, ¿cuál es el valor de: E = tan(θ) + sec(θ)?",
-        opciones: { A: "1", B: "2", C: "3/4", D: "7/4" },
-        correcta: "B",
-        explicacion: "Con sen=3/5, el lado opuesto=3, hipotenusa=5, adyacente=4 (Pitágoras: √(25-9)=4). Entonces tan(θ)=3/4 y sec(θ)=5/4. Suma: 3/4 + 5/4 = 8/4 = 2."
-    },
-    {
-        id: 3, area: "Ciencia y Tecnología",
-        enunciado: "Un bloque de 5 kg sobre superficie horizontal sin rozamiento recibe una fuerza de 20 N. Según la Segunda Ley de Newton, ¿cuál es su aceleración?",
-        opciones: { A: "2 m/s²", B: "4 m/s²", C: "10 m/s²", D: "25 m/s²" },
-        correcta: "B",
-        explicacion: "Segunda Ley de Newton: F = m·a → a = F/m = 20 N ÷ 5 kg = 4 m/s²."
-    },
-    {
-        id: 4, area: "Ciencias Sociales",
-        enunciado: "¿Cuál fue el héroe azangarino de la rebelión emancipadora del altiplano puneño que pronunció la célebre frase: 'Por este sol que nos alumbra, aprended a morir como yo'?",
-        opciones: { A: "Pedro Vilcapaza", B: "Túpac Katari", C: "Mateo Pumacahua", D: "Andrés Rázuri" },
-        correcta: "A",
-        explicacion: "Pedro Vilcapaza Alarcón, 'El Puma Indomable', héroe de Azángaro (Puno) y símbolo de la resistencia del altiplano en la rebelión emancipadora del siglo XVIII."
-    },
-    {
-        id: 5, area: "Comunicación",
-        enunciado: "Identifique el conector adecuado: 'El estudiante estudió todo el balotario con dedicación; ________, aprobó el examen con la nota máxima.'",
-        opciones: { A: "sin embargo", B: "por lo tanto", C: "a pesar de que", D: "no obstante" },
-        correcta: "B",
-        explicacion: "'Por lo tanto' es un conector de consecuencia o conclusión lógica. La oración expresa un resultado directo del esfuerzo previo del estudiante."
-    },
-    {
-        id: 6, area: "Matemática",
-        enunciado: "Simplifica la expresión: E = (sen²θ + cos²θ) × (1 + tan²θ)",
-        opciones: { A: "tan²θ", B: "1", C: "sec²θ", D: "cos²θ" },
-        correcta: "C",
-        explicacion: "sen²θ + cos²θ = 1 (identidad fundamental). Y 1 + tan²θ = sec²θ (identidad pitagórica). Entonces E = 1 × sec²θ = sec²θ."
-    },
-    {
-        id: 7, area: "Ciencia y Tecnología",
-        enunciado: "Un cuerpo parte del reposo con aceleración constante de 2 m/s². ¿Cuánto espacio habrá recorrido al cabo de 5 segundos?",
-        opciones: { A: "10 m", B: "25 m", C: "50 m", D: "100 m" },
-        correcta: "B",
-        explicacion: "Usando MRUV con v₀=0: x = ½·a·t² = ½ × 2 × 5² = 1 × 25 = 25 m."
-    },
-    {
-        id: 8, area: "Ciencias Sociales",
-        enunciado: "¿Cuál es la capital de la región Puno y a qué altitud aproximada se encuentra?",
-        opciones: { A: "Juliaca – 3824 m.s.n.m.", B: "Puno – 3827 m.s.n.m.", C: "Puno – 4100 m.s.n.m.", D: "Ayaviri – 3900 m.s.n.m." },
-        correcta: "B",
-        explicacion: "La ciudad de Puno, capital de la región homónima, se ubica a orillas del Lago Titicaca a aproximadamente 3827 m.s.n.m. Es considerada la capital folklórica del Perú."
-    }
-];
-
-// ===================== ESTADO DE LA APP =====================
 let filtroArea       = "Todas";
 let filtroEditorial  = "Todas";
 let filtroModalidad  = "Todas";
 let textoBusqueda    = "";
-
-let simPreguntas     = [];
-let simIndice        = 0;
-let simRespuestas    = {};
-let simTiempoRest    = 0;
-let simTimerInt      = null;
-let simCurrentId     = null;
-
-// ===================== ARRANQUE ROBUSTO =====================
-function iniciarApp() {
-    setupTabs();
-    setupFiltros();
-    // setupSimulacro();
+function iniciarApp() { 
+    setupTabs(); 
+    setupFiltros(); 
     setupModal();
-    renderLibros();
+    renderLibros(); 
     setupEasterEgg();
 }
-
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", iniciarApp);
 } else {
-    // Si el DOM ya cargó (scripts al final del body)
     iniciarApp();
 }
-
-// ===================== NAVEGACIÓN DE TABS =====================
 function setupTabs() {
     document.querySelectorAll(".nav-tab").forEach(tab => {
         tab.addEventListener("click", () => {
@@ -413,53 +291,41 @@ function setupTabs() {
         });
     });
 }
-
-// ===================== FILTROS DE BIBLIOTECA =====================
 function setupFiltros() {
-    // ÁREA
     document.querySelectorAll("[data-filter='area']").forEach(pill => {
         pill.addEventListener("click", () => {
             document.querySelectorAll("[data-filter='area']").forEach(p => p.classList.remove("active"));
             pill.classList.add("active");
             filtroArea = pill.dataset.val;
-            renderLibros();
+            renderLibros(); 
         });
     });
-
-    // EDITORIAL
     document.querySelectorAll("[data-filter='editorial']").forEach(pill => {
         pill.addEventListener("click", () => {
             document.querySelectorAll("[data-filter='editorial']").forEach(p => p.classList.remove("active"));
             pill.classList.add("active");
             filtroEditorial = pill.dataset.val;
-            renderLibros();
+            renderLibros(); 
         });
     });
-
-    // MODALIDAD
     document.getElementById("selectCarrera").addEventListener("change", e => {
         filtroModalidad = e.target.value;
-        renderLibros();
+        renderLibros(); 
     });
-
-    // BÚSQUEDA
     const input = document.getElementById("searchInput");
     const clrBtn = document.getElementById("clearSearch");
-
     input.addEventListener("input", e => {
         textoBusqueda = e.target.value.trim().toLowerCase();
         clrBtn.classList.toggle("show", textoBusqueda.length > 0);
-        renderLibros();
+        renderLibros(); 
     });
-
     clrBtn.addEventListener("click", () => {
         input.value = "";
         textoBusqueda = "";
         clrBtn.classList.remove("show");
-        renderLibros();
+        renderLibros(); 
     });
 }
-
 function areaToTag(area) {
     const map = {
         "Matemática": "tag-mat",
@@ -471,7 +337,6 @@ function areaToTag(area) {
     };
     return map[area] || "tag-hist";
 }
-
 function editorialToTag(ed) {
     const map = {
         "Lumbreras": "tag-lumb",
@@ -483,11 +348,9 @@ function editorialToTag(ed) {
     };
     return map[ed] || "tag-lumb";
 }
-
 function renderLibros() {
     const grid = document.getElementById("booksGrid");
     const count = document.getElementById("resultsCount");
-
     const filtrados = CATALOGO.filter(libro => {
         const matchArea = filtroArea === "Todas" || libro.area === filtroArea ||
             (filtroArea === "Razonamiento" && libro.area === "Razonamiento") ||
@@ -498,9 +361,7 @@ function renderLibros() {
             `${libro.titulo} ${libro.desc} ${libro.area} ${libro.editorial}`.toLowerCase().includes(textoBusqueda);
         return matchArea && matchEdit && matchMod && hayTexto;
     });
-
     count.textContent = `${filtrados.length} material${filtrados.length !== 1 ? "es" : ""} encontrado${filtrados.length !== 1 ? "s" : ""}`;
-
     if (filtrados.length === 0) {
         grid.innerHTML = `
             <div class="empty-state">
@@ -510,7 +371,6 @@ function renderLibros() {
             </div>`;
         return;
     }
-
     grid.innerHTML = filtrados.map(libro => `
         <div class="book-card">
             <div>
@@ -530,28 +390,18 @@ function renderLibros() {
         </div>
     `).join("");
 }
-
-// ===================== MODAL =====================
 function setupModal() {}
 function abrirModal(id) { simularDescarga(id); }
-
-// ===================== DESCARGA REAL DE PDFs =====================
 function obtenerRutaRealPDF(titulo, tipo) {
     if (typeof MAPA_PDFS === "undefined") return null;
-
     const palabras = titulo.toLowerCase().replace(/[^a-záéíóúñ0-9]/g, ' ').split(' ').filter(p => p.length > 2);
-    
-    // Búsqueda exacta primero
     for (let [nombre, ruta] of Object.entries(MAPA_PDFS)) {
         if (nombre.includes(titulo.toLowerCase())) {
             return ruta;
         }
     }
-
-    // Búsqueda por coincidencia de palabras clave
     let mejorMatch = null;
     let maxCoincidencias = 0;
-
     for (let [nombre, ruta] of Object.entries(MAPA_PDFS)) {
         let coincidencias = 0;
         for (let p of palabras) {
@@ -562,10 +412,8 @@ function obtenerRutaRealPDF(titulo, tipo) {
             mejorMatch = ruta;
         }
     }
-
     return (maxCoincidencias >= 2) ? mejorMatch : null;
 }
-
 function descargarPDFDirecto(rutaRelativa, nombreDescarga) {
     if (!rutaRelativa) {
         alert("El archivo se encuentra en la carpeta biblioteca_pdfs. Revisa la ruta.");
@@ -579,29 +427,20 @@ function descargarPDFDirecto(rutaRelativa, nombreDescarga) {
     enlace.click();
     document.body.removeChild(enlace);
 }
-
 function simularDescarga(id) {
     const libro = CATALOGO.find(l => l.id === id);
     if (!libro) return;
-    
     if (libro.ruta) {
         descargarPDFDirecto(libro.ruta, libro.titulo + ".pdf");
         return;
     }
-
     const rutaReal = obtenerRutaRealPDF(libro.titulo, libro.tipo);
     if (rutaReal) {
         descargarPDFDirecto(rutaReal, libro.titulo + ".pdf");
     } else {
-        // Enlace de respaldo seguro al temario oficial
         descargarPDFDirecto("biblioteca_pdfs/libros/temario actualizado UNAP 2026.pdf", libro.titulo + ".pdf");
     }
 }
-
-
-// ===================== EXÁMENES ESPECIALES =====================
-
-// ===================== EXÁMENES ESPECIALES REALES =====================
 function descargarExamen(tipo) {
     const mapaExamenes = {
         UNAP_1:   "biblioteca_pdfs/libros/ARVHIVO 2 EXAMENES UNAP - WILSON SADNESS.pdf",
@@ -612,17 +451,11 @@ function descargarExamen(tipo) {
         BANCO_SM: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Banco de preguntas.pdf",
         RM_RACSO: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM RACSO.pdf"
     };
-
     const ruta = mapaExamenes[tipo];
     if (ruta) {
         descargarPDFDirecto(ruta, ruta.split("/").pop());
     }
 }
-
-
-// ===================== FORMULARIOS INSANOS =====================
-
-// ===================== FORMULARIOS INSANOS REALES =====================
 function descargarFormulario(tipo) {
     const mapaForms = {
         ARITMETICA:       "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Aritmetica - Formulario Wilson.pdf",
@@ -634,84 +467,25 @@ function descargarFormulario(tipo) {
         QUIMICA:          "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Quimica - Formulario Wilson.pdf",
         RAZONAMIENTO_MAT: "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Razonamiento Matematico - Formulario Wilson.pdf"
     };
-
     const ruta = mapaForms[tipo];
     if (ruta) {
         descargarPDFDirecto(ruta, ruta.split("/").pop());
     }
 }
-
-
-// ===================== SIMULACRO =====================
-function setupSimulacro() {
-    document.getElementById("btnStartSim").addEventListener("click", iniciarSim);
-    document.getElementById("btnNext").addEventListener("click", avanzarSim);
-    document.getElementById("btnPrev").addEventListener("click", retrocederSim);
-    document.getElementById("btnEndSim").addEventListener("click", () => {
-        if (confirm("¿Deseas finalizar el simulacro y ver tus resultados?")) finalizarSim();
-    });
+);
 }
-
-function iniciarSim() {
-    const areaFiltro = document.getElementById("simArea").value;
-    const tiempo = parseInt(document.getElementById("simTiempo").value, 10);
-
-    simPreguntas = areaFiltro === "Todas"
-        ? [...PREGUNTAS]
-        : PREGUNTAS.filter(q => q.area === areaFiltro);
-
-    if (simPreguntas.length === 0) simPreguntas = [...PREGUNTAS];
-
-    simIndice = 0;
-    simRespuestas = {};
-    simTiempoRest = tiempo;
-
-    document.getElementById("simStart").style.display = "none";
-    document.getElementById("simResults").style.display = "none";
-    document.getElementById("simLive").style.display = "block";
-
+;
     iniciarTimer();
     renderPregunta();
     renderDots();
 }
-
-function iniciarTimer() {
-    clearInterval(simTimerInt);
-    actualizarTimer();
-    simTimerInt = setInterval(() => {
-        simTiempoRest--;
-        actualizarTimer();
-        if (simTiempoRest <= 0) {
-            clearInterval(simTimerInt);
-            alert("¡Tiempo agotado! Se calificará automáticamente.");
-            finalizarSim();
-        }
     }, 1000);
 }
-
-function actualizarTimer() {
-    const m = Math.floor(simTiempoRest / 60).toString().padStart(2, "0");
-    const s = (simTiempoRest % 60).toString().padStart(2, "0");
-    document.getElementById("timerDisplay").textContent = `${m}:${s}`;
-    document.getElementById("simTimer").classList.toggle("danger", simTiempoRest <= 60);
+:${s}`;
 }
-
-function renderPregunta() {
-    const q = simPreguntas[simIndice];
-    const total = simPreguntas.length;
-    const pct = ((simIndice + 1) / total) * 100;
-    const sel = simRespuestas[q.id];
-
-    document.getElementById("simProgressInfo").textContent = `Pregunta ${simIndice + 1} de ${total}`;
-    document.getElementById("simProgressFill").style.width = `${pct}%`;
-    document.getElementById("btnPrev").disabled = simIndice === 0;
-
-    const btnNext = document.getElementById("btnNext");
-    btnNext.innerHTML = simIndice === total - 1
+ de ${total}`;
         ? `Finalizar <i class="ph ph-check"></i>`
         : `Siguiente <i class="ph ph-arrow-right"></i>`;
-
-    document.getElementById("simQuestionCard").innerHTML = `
         <span class="q-badge ${areaToTag(q.area)}">${q.area}</span>
         <div class="q-prompt">${q.enunciado}</div>
         <div class="options">
@@ -723,49 +497,24 @@ function renderPregunta() {
         </div>`;
     renderDots();
 }
-
-function elegirOpcion(qId, letra) {
-    simRespuestas[qId] = letra;
-    renderPregunta();
-}
-
-function renderDots() {
-    document.getElementById("simDots").innerHTML = simPreguntas.map((q, i) => {
-        const resp = simRespuestas[q.id] !== undefined;
-        const activa = i === simIndice;
-        return `<span class="dot ${activa ? "active" : resp ? "answered" : ""}" onclick="irSim(${i})" title="Pregunta ${i+1}"></span>`;
+" onclick="irSim(${i})" title="Pregunta ${i+1}"></span>`;
     }).join("");
 }
-
-function irSim(i) { simIndice = i; renderPregunta(); }
-function avanzarSim() { simIndice < simPreguntas.length - 1 ? simIndice++ && renderPregunta() || renderPregunta() : finalizarSim(); }
-function retrocederSim() { if (simIndice > 0) { simIndice--; renderPregunta(); } }
-
-function finalizarSim() {
-    clearInterval(simTimerInt);
-    let correctas = 0;
-    simPreguntas.forEach(q => { if (simRespuestas[q.id] === q.correcta) correctas++; });
-    const nota = Math.round((correctas / simPreguntas.length) * 20);
+ }
+);
     const aprobado = nota >= 11;
-
-    document.getElementById("simLive").style.display = "none";
-    const res = document.getElementById("simResults");
     res.style.display = "block";
-
     res.innerHTML = `
         <div class="score-hero">
             <div class="score-num">${nota} / 20</div>
             <div class="score-label ${aprobado ? "score-ok" : "score-bad"}">
                 ${aprobado ? "✅ ¡APROBADO! Vas bien encaminado." : "❌ NECESITAS REPASAR — Revisa el solucionario"}
             </div>
-            <div class="score-sub">Acertaste <strong>${correctas}</strong> de <strong>${simPreguntas.length}</strong> preguntas</div>
         </div>
         <h3 style="font-family:var(--font-h);margin-bottom:1rem;color:#1e3a8a;">
             <i class="ph ph-check-square-offset"></i> Solucionario y Explicaciones:
         </h3>
         <div class="review-list">
-            ${simPreguntas.map((q, i) => {
-                const marc = simRespuestas[q.id] || "Sin responder";
                 const ok = marc === q.correcta;
                 return `
                     <div class="review-item ${ok ? "ok" : "bad"}">
@@ -783,13 +532,6 @@ function finalizarSim() {
             </button>
         </div>`;
 }
-
-function reiniciarSim() {
-    document.getElementById("simResults").style.display = "none";
-    document.getElementById("simStart").style.display = "block";
-}
-
-// ===================== SECRET EASTER EGG (AQUINO) =====================
 function setupEasterEgg() {
     const logoEgg = document.getElementById("secretLogoEgg");
     if (logoEgg) {
@@ -797,10 +539,11 @@ function setupEasterEgg() {
         logoEgg.addEventListener("click", () => {
             clickCount++;
             if (clickCount >= 2) {
-                // Abre el link solicitado en una nueva pestaña
                 window.open("https://www.youtube.com/watch?v=w4iTbDluHfY", "_blank");
                 clickCount = 0;
             }
         });
     }
 }
+
+iniciarApp();

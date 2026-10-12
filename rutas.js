@@ -1,4 +1,3 @@
-// Mapa de rutas limpias de PDFs reales
 const MAPA_PDFS = {
   "archivo examenes cepreuna - wilson sadness.pdf": "biblioteca_pdfs/libros/ARCHIVO EXAMENES CEPREUNA - WILSON SADNESS.pdf",
   "archivo examenes unap - wilson sadness.pdf": "biblioteca_pdfs/libros/ARCHIVO EXAMENES UNAP - WILSON SADNESS.pdf",
