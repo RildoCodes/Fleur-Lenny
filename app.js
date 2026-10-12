@@ -414,16 +414,15 @@ function obtenerRutaRealPDF(titulo, tipo) {
     }
     return (maxCoincidencias >= 2) ? mejorMatch : null;
 }
-const GOOGLE_DRIVE_FOLDER = "https://drive.google.com/drive/folders/1dOEWd3PXvjSBs11EvzPyVggeWXrAdWDZ?usp=sharing";
+const GOOGLE_DRIVE_FOLDER_ID = "1dOEWd3PXvjSBs11EvzPyVggeWXrAdWDZ";
 
 function descargarPDFDirecto(rutaRelativa, nombreDescarga) {
     const esWebPublica = window.location.protocol.startsWith("http");
     if (esWebPublica) {
-        window.open(GOOGLE_DRIVE_FOLDER, "_blank");
-        return;
-    }
-    if (!rutaRelativa) {
-        window.open(GOOGLE_DRIVE_FOLDER, "_blank");
+        const nombreLimpio = (nombreDescarga || rutaRelativa.split("/").pop()).replace(".pdf", "").replace(".PDF", "").trim();
+        const terminoBusqueda = encodeURIComponent("name contains '" + nombreLimpio + "'");
+        const urlDriveBusqueda = `https://drive.google.com/drive/folders/${GOOGLE_DRIVE_FOLDER_ID}?q=${terminoBusqueda}`;
+        window.open(urlDriveBusqueda, "_blank");
         return;
     }
     const enlace = document.createElement("a");
