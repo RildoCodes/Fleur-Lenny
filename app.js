@@ -198,7 +198,7 @@ const CATALOGO = [
     { id: 197, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Economía.pdf",titulo: "San Marcos – Economía (Siglo XXI)",                    area: "Letras",     editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",    desc: "Economía básica, mercado, macroeconomía y economía peruana." },
     { id: 198, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Psicotécnico.pdf",titulo: "San Marcos – Psicotécnico (Siglo XXI)",                area: "Razonamiento", editorial: "San Marcos", modalidad: "Sociales", tipo: "Compendio",  desc: "Psicotécnico, series, analogías y razonamiento abstracto San Marcos." },
     { id: 199, ruta: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Banco de preguntas.pdf",titulo: "San Marcos – Banco de Preguntas",                      area: "Razonamiento", editorial: "San Marcos", modalidad: "Sociales", tipo: "Banco",       desc: "Gran banco de preguntas de todas las áreas. Colección Siglo XXI." },
-    { id: 200, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM RACSO.pdf",titulo: "RM RACSO (Wilson Sadness)",                            area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Razonamiento Matemático RACSO recopilado por Wilson Sadness. Muy recomendado." },
+    { id: 200, ruta: "docs/RM RACSO.pdf",titulo: "RM RACSO (Wilson Sadness)",                            area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Razonamiento Matemático RACSO recopilado por Wilson Sadness. Muy recomendado." },
     { id: 201, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM Lumbreras Compendios Académicos.pdf",titulo: "RM Lumbreras Compendios Académicos (Wilson)",          area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "Razonamiento Matemático Lumbreras Compendios Académicos." },
     { id: 202, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM Lumbreras Propedéutica para las ciencias.pdf",titulo: "RM Lumbreras Propedéutica para las Ciencias (Wilson)",  area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",  desc: "RM propedéutico de Lumbreras para ciencias exactas." },
     { id: 203, ruta: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RECOMENDADO RM Lumbreras Ciencias y HUmanidades SOLUCIONARIO.pdf",titulo: "RM Lumbreras Celeste – Ciencias y Humanidades",        area: "Razonamiento", editorial: "Wilson", modalidad: "Ingenierias", tipo: "Compendio",   desc: "RM celeste de Lumbreras para ciencias y humanidades." },
@@ -414,17 +414,23 @@ function obtenerRutaRealPDF(titulo, tipo) {
     }
     return (maxCoincidencias >= 2) ? mejorMatch : null;
 }
-const GOOGLE_DRIVE_FOLDER_ID = "1dOEWd3PXvjSBs11EvzPyVggeWXrAdWDZ";
+const DRIVE_URL_OFICIAL = "https://drive.google.com/drive/folders/1dOEWd3PXvjSBs11EvzPyVggeWXrAdWDZ?usp=sharing";
 
 function descargarPDFDirecto(rutaRelativa, nombreDescarga) {
     const esWebPublica = window.location.protocol.startsWith("http");
+    
+    // Si la web se abre desde internet (GitHub Pages), abrir directamente la carpeta de Google Drive
     if (esWebPublica) {
-        const nombreLimpio = (nombreDescarga || rutaRelativa.split("/").pop()).replace(".pdf", "").replace(".PDF", "").trim();
-        const terminoBusqueda = encodeURIComponent("name contains '" + nombreLimpio + "'");
-        const urlDriveBusqueda = `https://drive.google.com/drive/folders/${GOOGLE_DRIVE_FOLDER_ID}?q=${terminoBusqueda}`;
-        window.open(urlDriveBusqueda, "_blank");
+        window.open(DRIVE_URL_OFICIAL, "_blank");
         return;
     }
+
+    // Si se abre localmente en tu computadora, descargar el PDF directamente de tu disco duro
+    if (!rutaRelativa) {
+        window.open(DRIVE_URL_OFICIAL, "_blank");
+        return;
+    }
+
     const enlace = document.createElement("a");
     enlace.href = rutaRelativa;
     enlace.target = "_blank";
@@ -444,18 +450,18 @@ function simularDescarga(id) {
     if (rutaReal) {
         descargarPDFDirecto(rutaReal, libro.titulo + ".pdf");
     } else {
-        descargarPDFDirecto("biblioteca_pdfs/libros/temario actualizado UNAP 2026.pdf", libro.titulo + ".pdf");
+        descargarPDFDirecto("docs/temario actualizado UNAP 2026.pdf", libro.titulo + ".pdf");
     }
 }
 function descargarExamen(tipo) {
     const mapaExamenes = {
-        UNAP_1:   "biblioteca_pdfs/libros/ARVHIVO 2 EXAMENES UNAP - WILSON SADNESS.pdf",
-        UNAP_2:   "biblioteca_pdfs/libros/ARCHIVO EXAMENES UNAP - WILSON SADNESS.pdf",
-        CEPREUNA: "biblioteca_pdfs/libros/ARCHIVO EXAMENES CEPREUNA - WILSON SADNESS.pdf",
-        UNSA:     "biblioteca_pdfs/libros/ARCHIVO EXAMENES UNSA - WILSON SADNESS.pdf",
-        TEMARIO:  "biblioteca_pdfs/libros/temario actualizado UNAP 2026.pdf",
+        UNAP_1:   "docs/ARVHIVO 2 EXAMENES UNAP - WILSON SADNESS.pdf",
+        UNAP_2:   "docs/ARCHIVO EXAMENES UNAP - WILSON SADNESS.pdf",
+        CEPREUNA: "docs/ARCHIVO EXAMENES CEPREUNA - WILSON SADNESS.pdf",
+        UNSA:     "docs/ARCHIVO EXAMENES UNSA - WILSON SADNESS.pdf",
+        TEMARIO:  "docs/temario actualizado UNAP 2026.pdf",
         BANCO_SM: "biblioteca_pdfs/libros/PRE U Libros SOCIALES y BIOMÉDICAS/SIGLO XXI - SAN MARCOS/Banco de preguntas.pdf",
-        RM_RACSO: "biblioteca_pdfs/libros/RAZ. MAT - WILSON SADNESS/RM RACSO.pdf"
+        RM_RACSO: "docs/RM RACSO.pdf"
     };
     const ruta = mapaExamenes[tipo];
     if (ruta) {
@@ -464,14 +470,14 @@ function descargarExamen(tipo) {
 }
 function descargarFormulario(tipo) {
     const mapaForms = {
-        ARITMETICA:       "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Aritmetica - Formulario Wilson.pdf",
-        ALGEBRA:          "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Algebra - Formulario Wilson.pdf",
-        GEOMETRIA_PLANA:  "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Geometria Plana - Formulario Wilson.pdf",
-        GEOMETRIA_ESPACIO:"biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Geometria del Espacio - Formulario Wilson.pdf",
-        TRIGONOMETRIA:    "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Trigonometria - Formulario Wilson.pdf",
-        FISICA:           "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Fisica - Formulario Wilson.pdf",
-        QUIMICA:          "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Quimica - Formulario Wilson.pdf",
-        RAZONAMIENTO_MAT: "biblioteca_pdfs/libros/FORMULARIO INSANO - WILSON SADNESS/Razonamiento Matematico - Formulario Wilson.pdf"
+        ARITMETICA:       "docs/Aritmetica - Formulario Wilson.pdf",
+        ALGEBRA:          "docs/Algebra - Formulario Wilson.pdf",
+        GEOMETRIA_PLANA:  "docs/Geometria Plana - Formulario Wilson.pdf",
+        GEOMETRIA_ESPACIO:"docs/Geometria del Espacio - Formulario Wilson.pdf",
+        TRIGONOMETRIA:    "docs/Trigonometria - Formulario Wilson.pdf",
+        FISICA:           "docs/Fisica - Formulario Wilson.pdf",
+        QUIMICA:          "docs/Quimica - Formulario Wilson.pdf",
+        RAZONAMIENTO_MAT: "docs/Razonamiento Matematico - Formulario Wilson.pdf"
     };
     const ruta = mapaForms[tipo];
     if (ruta) {
