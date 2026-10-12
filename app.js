@@ -414,9 +414,16 @@ function obtenerRutaRealPDF(titulo, tipo) {
     }
     return (maxCoincidencias >= 2) ? mejorMatch : null;
 }
+const GOOGLE_DRIVE_FOLDER = "https://drive.google.com/drive/folders/1dOEWd3PXvjSBs11EvzPyVggeWXrAdWDZ?usp=sharing";
+
 function descargarPDFDirecto(rutaRelativa, nombreDescarga) {
+    const esWebPublica = window.location.protocol.startsWith("http");
+    if (esWebPublica) {
+        window.open(GOOGLE_DRIVE_FOLDER, "_blank");
+        return;
+    }
     if (!rutaRelativa) {
-        alert("El archivo se encuentra en la carpeta biblioteca_pdfs. Revisa la ruta.");
+        window.open(GOOGLE_DRIVE_FOLDER, "_blank");
         return;
     }
     const enlace = document.createElement("a");
